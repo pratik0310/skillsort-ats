@@ -57,11 +57,11 @@ Rules:
 "Not Selected - [Short reason]. Suggestions: [Improvement tips]"
 
 Give a human-style, supportive tone.
-`;
+`;  
 
   let decision;
   try {
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-3-flash-preview" });
     const result = await model.generateContent(prompt);
     decision = result.response.text().trim();
   } catch (err) {
